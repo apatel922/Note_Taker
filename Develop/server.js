@@ -33,7 +33,7 @@ app.post("/api/notes", function(req, res) {
     // Send user entry to listofNotes array (I dont know if its working...)
     listofNotes.push(notePlus);
 
-    fs.writeFile("Develop/db/db.json", JSON.stringify(listofNotes));
+    fs.writeFile(__dirname + "/db/db.json", JSON.stringify(listofNotes));
     res.json(notePlus);
 });
 
