@@ -10,13 +10,14 @@ var PORT = 8080;
 // Empty note array
 var listofNotes = [];
 
-// Sets up the Express app to handle data parsing
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
 
 // Routes
 // =====================================
+
+// USE
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 // GET
 app.get("/", function(req, res) {
